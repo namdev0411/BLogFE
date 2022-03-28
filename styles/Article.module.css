@@ -1,0 +1,13 @@
+.title_wrap{
+    border-bottom: 1px solid black;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.title_wrap h1{
+    margin: 0;
+    padding: 0;
+}
+.title_wrap:hover{
+    background-color: chartreuse;
+}
