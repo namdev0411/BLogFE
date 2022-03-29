@@ -28,7 +28,6 @@ export async function getStaticProps() {
   const data = await res.json();
   return {
     props: {
-      data: data.data,
-    },
+      data: data.data}
   };
 }

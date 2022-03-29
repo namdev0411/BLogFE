@@ -14,3 +14,15 @@ a {
 * {
   box-sizing: border-box;
 }
+.spinner{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%,-50%);
+  background: rgba(999, 999, 999, .8);
+}
