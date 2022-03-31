@@ -1,15 +1,9 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import {Navbar, Container, NavDropdown,Nav,Spinner} from 'react-bootstrap';
-import { useEffect, useState } from "react";
+import {Navbar, Container, NavDropdown,Nav} from 'react-bootstrap';
+import Link from "next/link";
 
 export default function Home() {
-  const [isloading, setIsloading] = useState(false);
-
-  useEffect(() => {
-    setIsloading(true);
-  }, [])
-  
   return (
     <div className={styles.container}>
       <Head>
@@ -24,7 +18,9 @@ export default function Home() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="/article">記事</Nav.Link>
+                <Nav.Link>
+                  <Link href="/article">記事</Link>
+                </Nav.Link>
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 </NavDropdown>
@@ -33,7 +29,6 @@ export default function Home() {
           </Container>
         </Navbar>
         <h2 style={{textAlign: 'center'}}>Home</h2>
-        {isloading ? <Spinner animation="border" variant="primary" /> : ""}
       </main>
       <footer className={styles.footer}></footer>
     </div>

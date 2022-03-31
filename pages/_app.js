@@ -3,6 +3,7 @@ import Router from "next/router";
 import { useState } from "react";
 import ScaleLoader from "react-spinners/ScaleLoader";
 import { css } from "@emotion/react";
+import Head from 'next/head'
 
 const override = css`
   display: flex;
